@@ -8,6 +8,7 @@ spring:
       client:
         name: coffee-shop-client
         version: 0.0.1
+        request-timeout: 120s
         toolcallback:
           enabled: true
         capabilities:

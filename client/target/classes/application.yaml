@@ -1,0 +1,24 @@
+logging:
+  level:
+    org.springframework.ai: TRACE
+    org.springframework.web.client.RestClient: DEBUG
+
+spring:
+  application:
+    name: eclient
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+    mcp:
+      client:
+        name: elicitations
+        version: 0.0.1
+        toolcallback:
+          enabled: true
+        capabilities:
+          elicitation:
+            form: {}
+        streamable-http:
+          connections:
+            elicitations:
+              url: http://localhost:8081

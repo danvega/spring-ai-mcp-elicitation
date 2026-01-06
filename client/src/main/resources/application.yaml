@@ -16,4 +16,6 @@ spring:
         streamable-http:
           connections:
             coffeeshop:
-              url: http://localhost:8081
+              url: http://localhost:8081/mcp
+            dvaas:
+              url: https://mcp.danvega.dev/mcp

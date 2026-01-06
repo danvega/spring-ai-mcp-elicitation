@@ -24,7 +24,7 @@ public class CoffeeTools {
         log.info("orderCoffee called with size={}, type={}, milk={}", size, type, milk);
 
         // Got everything? Skip elicitation
-        if (!size.isBlank() && !type.isBlank() && !milk.isBlank()) {
+        if (size != null && !size.isBlank() && type != null && !type.isBlank() && milk != null && !milk.isBlank()) {
             return "☕ Order confirmed: %s %s with %s milk".formatted(size, type, milk);
         }
 

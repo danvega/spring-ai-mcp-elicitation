@@ -6,7 +6,7 @@ spring:
       api-key: ${OPENAI_API_KEY}
     mcp:
       client:
-        name: elicitations
+        name: coffeeshop-client
         version: 0.0.1
         toolcallback:
           enabled: true
@@ -15,5 +15,5 @@ spring:
             form: {}
         streamable-http:
           connections:
-            elicitations:
+            coffeeshop:
               url: http://localhost:8081

@@ -16,9 +16,13 @@ public class ChatController {
     private final ChatClient chatClient;
 
     public ChatController(ChatClient.Builder builder, ToolCallbackProvider tools) {
+
+        // list what tools are available: just using this for debugging
         Arrays.stream(tools.getToolCallbacks()).forEach(t -> {
             log.info("Tool Callback found: {}", t.getToolDefinition());
         });
+
+
         this.chatClient = builder
                 .defaultToolCallbacks(tools)
                 .build();
@@ -28,7 +32,7 @@ public class ChatController {
     @GetMapping("/")
     public String chat() {
         return chatClient.prompt()
-                .system("You are a barista at Dan's Coffee Shop. Use the order_coffee tool to process all customer orders.")
+                .system("You are a barista at Dan's Coffee Shop. Use the order-coffee tool to process all customer orders.")
                 .user("I would like to order a coffee")
                 .call()
                 .content();

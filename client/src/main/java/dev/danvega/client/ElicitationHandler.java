@@ -22,7 +22,7 @@ public class ElicitationHandler {
     }
 
     @SuppressWarnings("unchecked")
-    @McpElicitation(clients = {"elicitations"})
+    @McpElicitation(clients = "coffeeshop")
     public ElicitResult handleElicitation(ElicitRequest request) {
         System.out.println("\n=== " + request.message() + " ===\n");
 

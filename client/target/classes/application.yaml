@@ -1,12 +1,12 @@
 spring:
   application:
-    name: eclient
+    name: coffee-shop-client
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
     mcp:
       client:
-        name: coffeeshop-client
+        name: coffee-shop-client
         version: 0.0.1
         toolcallback:
           enabled: true

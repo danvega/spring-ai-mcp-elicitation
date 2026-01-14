@@ -1,6 +1,6 @@
 spring:
   application:
-    name: coffee-shop
+    name: coffee-shop-server
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
